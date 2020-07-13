@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Timeline basic demo</title>
+  <script src="timeline/dist/timeline.js"></script>
+  <link href="timeline/dist/timeline.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="timeline"></div>
+<script type="text/javascript">
+  var container = document.getElementById('timeline');
+  var data = [
+    {id: 1, content: 'Initial Process', start: '2013-04-20'},
+    {id: 2, content: 'Stage one', start: '2013-04-14'},
+    {id: 3, content: 'Stage one testing prhase', start: '2013-04-18'},
+    {id: 4, content: 'stage two', start: '2013-04-16', end: '2013-04-19'},
+    {id: 5, content: 'stage three', start: '2013-04-25'},
+    {id: 6, content: 'launch', start: '2013-04-27'}
+  ];
+  var options = {};
+  var timeline = new timeline.Timeline(container, data, options);
+</script>
+</body>
+</html>
