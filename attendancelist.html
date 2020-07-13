@@ -10,10 +10,12 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<title>:: Soccer :: Project List</title>
+<title>Assist :: Attendance</title>
 
 <!-- Bootstrap Core and vandor -->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+<link rel="stylesheet" href="assets/plugins/charts-c3/c3.min.css"/>
 
 <!-- Core css -->
 <link rel="stylesheet" href="assets/css/main.css"/>
@@ -295,12 +297,12 @@
     </div>
 
     <div id="left-sidebar" class="sidebar ">
-        <h5 class="brand-name">Soccer <a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+        <h5 class="brand-name">Assist <a href="javascript:void(0)" class="menu_option float-right"></a></h5>
         <nav id="left-sidebar-nav" class="sidebar-nav">
             <ul class="metismenu">
-                <li class="g_heading">Project</li>
+                <li class="g_heading">Attendance</li>
                 <li class="active"><a href="index-2.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>                        
-                <li><a href="project-list.html"><i class="fa fa-list-ol"></i><span>Project list</span></a></li>
+                <li><a href="index.html"><i class="fa fa-list-ol"></i><span>Project list</span></a></li>
                 <li><a href="project-taskboard.html"><i class="fa fa-calendar-check-o"></i><span>Taskboard</span></a></li>
                 <!-- <li><a href="project-ticket.html"><i class="fa fa-list-ul"></i><span>Ticket List</span></a></li> -->
                 <!-- <li><a href="project-ticket-details.html"><i class="icon-tag"></i><span>Ticket Details</span></a></li> -->
@@ -342,7 +344,7 @@
                     <div class="right">
                         <div class="input-icon xs-hide mr-4">
                             <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-icon-addon"></span>
+                            <!-- <span class="input-icon-addon"><i class="fe fe-search"></i></span> -->
                         </div>
                         <div class="notification d-flex">
                             <div class="dropdown d-flex">
@@ -475,13 +477,13 @@
                     <div class="col-md-12">
                         <div class="d-flex justify-content-between align-items-center">
                             <ul class="nav nav-tabs page-header-tab">
-                                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Project-OnGoing">OnGoing</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Project-OnGoing">OnGoing</a></li>
                                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Project-UpComing">UpComing</a></li>
-                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Project-add">Add</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Project-add">Add</a></li> -->
                             </ul>
                             <div class="header-action d-md-flex">
                                 <div class="input-group mr-2">
-                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <!-- <input type="text" class="form-control" placeholder="Search..."> -->
                                 </div>
                             </div>
                         </div>
@@ -492,7 +494,7 @@
         <div class="section-body mt-3">
             <div class="container-fluid">
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="Project-OnGoing" role="tabpanel">
+                    <div class="tab-pane fade" id="Project-UpComing" role="tabpanel">
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
                                 <div class="card">
@@ -745,7 +747,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">Job Portal Web App</h3>
+                                        <h3 class="card-title">Tracking Timeline</h3>
                                         <div class="card-options">
                                             <label class="custom-switch m-0">
                                                 <input type="checkbox" value="1" class="custom-switch-input" checked>
@@ -810,7 +812,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="Project-UpComing" role="tabpanel">
+                    <div class="tab-pane fade show active" id="Project-OnGoing" role="tabpanel">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
@@ -819,73 +821,91 @@
                                             <table class="table table-hover table-striped table-vcenter mb-0 text-nowrap">
                                                 <thead>
                                                     <tr>
-                                                        <th>Owner</th>
-                                                        <th>Milestone</th>
-                                                        <th class="w100">Work</th>
-                                                        <th class="w100">Duration</th>
-                                                        <th>Priority</th>
+                                                        <th>Employee</th>
+                                                        <th>Designation</th>
+                                                        <th class="w100">Leave</th>
+                                                        <th class="w100">Worked</th>
+                                                        <th>Status</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar1.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Isidore Dilao</span></td>
-                                                        <td>Account receivable</td>
-                                                        <td><span>30:00</span></td>
+                                                        <td>Director</td>
+                                                        <td><span>08:00</span></td>
                                                         <td>30:0 hrs</td>
-                                                        <td><span class="text-warning">Medium</span></td>
+                                                        <td><span>None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar2.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Maricel Villalon</span></td>
-                                                        <td>Account receivable</td>
-                                                        <td><span>68:00</span></td>
+                                                        <td>Editor</td>
+                                                        <td><span>00:00</span></td>
                                                         <td>105:0 hrs</td>
-                                                        <td><span class="text-danger">High</span></td>
+                                                        <td><span>None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar3.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Theresa Wright</span></td>
                                                         <td>Approval site</td>
-                                                        <td><span>74:00</span></td>
+                                                        <td><span>16:00</span></td>
                                                         <td>89:0 hrs</td>
                                                         <td><span>None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar4.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Jason Porter</span></td>
-                                                        <td>Final touch up</td>
-                                                        <td><span>30:00</span></td>
+                                                        <td>Producer</td>
+                                                        <td><span>10:00</span></td>
                                                         <td>30:0 hrs</td>
                                                         <td><span>None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar5.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Annelyn Mercado</span></td>
-                                                        <td>Account receivable</td>
-                                                        <td><span>30:00</span></td>
+                                                        <td>Production Manager</td>
+                                                        <td><span>08:00</span></td>
                                                         <td>30:0 hrs</td>
                                                         <td><span>None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar6.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Sean Black</span></td>
-                                                        <td>Basement slab preparation</td>
-                                                        <td><span>88:00</span></td>
+                                                        <td>Assistant Director</td>
+                                                        <td><span>00:00</span></td>
                                                         <td>88:0 hrs</td>
                                                         <td><span>None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar7.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>Scott Ortega</span></td>
-                                                        <td>Account receivable</td>
-                                                        <td><span>56:00</span></td>
+                                                        <td>Art director</td>
+                                                        <td><span>00:00</span></td>
                                                         <td>125:0 hrs</td>
-                                                        <td><span class="text-warning">Medium</span></td>
+                                                        <td><span">None</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img src="assets/images/xs/avatar8.jpg" alt="Avatar" class="w30 rounded-circle mr-2"> <span>David Wallace</span></td>
-                                                        <td>Account receivable</td>
-                                                        <td><span>30:00</span></td>
+                                                        <td>Costume designer</td>
+                                                        <td><span>08:00</span></td>
                                                         <td>30:0 hrs</td>
                                                         <td><span>None</span></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
+                                        
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Sales Analytics - Based on Employee Interaction</h3>
+                                                <div class="card-options">
+                                                    <button class="btn btn-sm btn-outline-secondary mr-1" id="one_month">1M</button>
+                                                    <button class="btn btn-sm btn-outline-secondary mr-1" id="six_months">6M</button>
+                                                    <button class="btn btn-sm btn-outline-secondary mr-1" id="one_year" class="active">1Y</button>
+                                                    <button class="btn btn-sm btn-outline-secondary mr-1" id="ytd">YTD</button>
+                                                    <button class="btn btn-sm btn-outline-secondary" id="all">ALL</button>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="apex-timeline-chart"></div>
+                                            </div>
+                                        </div>                
                                     </div>
                                 </div>
                             </div>
@@ -902,13 +922,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
-                            <a href="templateshub.net">Templates Hub</a>
+                            <!-- <a href="templateshub.net">Templates Hub</a> -->
                         </div>
                         <div class="col-md-6 col-sm-12 text-md-right">
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><a href="doc/index.html">Documentation</a></li>
+                                <!-- <li class="list-inline-item"><a href="doc/index.html">Documentation</a></li>
                                 <li class="list-inline-item"><a href="javascript:void(0)">FAQ</a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-outline-primary btn-icon">Buy Now</a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-outline-primary btn-icon">Buy Now</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -922,6 +942,14 @@
 <script src="assets/bundles/lib.vendor.bundle.js"></script>
 
 <script src="assets/js/core.js"></script>
+
+
+<script src="assets/bundles/apexcharts.bundle.js"></script>
+<script src="assets/bundles/counterup.bundle.js"></script>
+<script src="assets/bundles/knobjs.bundle.js"></script>
+<script src="assets/bundles/c3.bundle.js"></script>
+
+<script src="assets/js/page/project-index.js"></script>
 </body>
 
 <!-- soccer/project/project-list.html  07 Jan 2020 03:41:02 GMT -->
